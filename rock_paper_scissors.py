@@ -35,29 +35,32 @@ elif computer_choice == 1:
 else:
     computer_icon=scissors
 user_choice = int(input("Welcome to the game\nPlease choose, 0 For rock, 1 For Paper or 2 for scissors: "))
-user_icon = ""
-if user_choice == 0:
-    user_icon=rock
-elif user_choice == 1:
-    user_icon=paper
-else:
-    user_icon=scissors
-print("Your Choice:")
-print(user_icon)
-print("Computer Choice:")
-print(computer_icon)
-if computer_choice == user_choice:
-   print("Its Draw")
-else:
-    if user_choice == 0 and computer_choice ==1:
-        print("Computer win")
-    elif user_choice == 0 and computer_choice ==2:
-        print("User win")
-    elif user_choice == 1 and computer_choice ==0:
-        print("User win")
-    elif user_choice == 1 and computer_choice ==2:
-        print("Computer win")
-    elif user_choice == 2 and computer_choice ==0:
-        print("Computer win")
+if user_choice == 0 or user_choice == 1 or user_choice ==2 :
+    user_icon = ""
+    if user_choice == 0:
+        user_icon=rock
+    elif user_choice == 1:
+        user_icon=paper
+    elif user_choice == 2:
+        user_icon=scissors
+    print("Your Choice:")
+    print(user_icon)
+    print("Computer Choice:")
+    print(computer_icon)
+    if computer_choice == user_choice:
+       print("Its Draw")
     else:
-        print("User win")
+        if user_choice == 0 and computer_choice ==1:
+            print("Computer win")
+        elif user_choice == 0 and computer_choice ==2:
+            print("User win")
+        elif user_choice == 1 and computer_choice ==0:
+            print("User win")
+        elif user_choice == 1 and computer_choice ==2:
+            print("Computer win")
+        elif user_choice == 2 and computer_choice ==0:
+            print("Computer win")
+        else:
+            print("User win")
+else:
+    print("you lose, you chose wrong number")
